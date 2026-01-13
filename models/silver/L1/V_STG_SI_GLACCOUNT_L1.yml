@@ -1,0 +1,90 @@
+version: 2
+
+models:
+  - name: V_STG_SI_GLACCOUNT_L1
+    description: "This table stores information about general ledger accounts, including account numbers, titles, types, and balances. It also tracks various settings and requirements for each account, such as department, location, and taxability. The table includes metadata about when each account was created, modified, and deleted, as well as information about the user who performed these actions."
+    columns:
+      - name: RCIPASSET_GL_ACCOUNT
+        description: "Reference to a related asset general ledger account"
+      - name: RECORD_NO
+        description: "Unique identifier for the record"
+      - name: ACCOUNT_NO
+        description: "General ledger account number"
+      - name: TITLE
+        description: "Description or title of the general ledger account"
+      - name: ACCOUNT_TYPE
+        description: "Type of general ledger account (e.g. balance sheet, income statement)"
+      - name: NORMAL_BALANCE
+        description: "Normal balance type of the account (debit or credit)"
+      - name: CLOSING_TYPE
+        description: "Type of account closing (e.g. non-closing, closing)"
+      - name: REQUIRE_DEPT
+        description: "Flag indicating if department is required for this account"
+      - name: REQUIRE_LOC
+        description: "Flag indicating if location is required for this account"
+      - name: TAXABLE
+        description: "Flag indicating if the account is taxable"
+      - name: CATEGORY
+        description: "The category of the general ledger account, such as 'Cash and Cash Equivalents'."
+      - name: CATEGORY_KEY
+        description: "A unique key or code associated with the category of the general ledger account."
+      - name: TAX_CODE
+        description: "The tax code associated with the general ledger account, if applicable."
+      - name: MRC_CODE
+        description: "The material resource code (MRC) associated with the general ledger account, if applicable."
+      - name: CLOSE_TO_ACCT_KEY
+        description: "The account key to which the account is closed, if applicable."
+      - name: ALTERNATIVE_ACCOUNT
+        description: "An alternative account associated with the general ledger account, if applicable."
+      - name: SUBLEDGER_CONTROL_ON
+        description: "A boolean indicating whether subledger control is enabled for the general ledger account."
+      - name: WIP_SETUP_ACCT_TYPE
+        description: "The type of work-in-progress (WIP) setup account associated with the general ledger account, if applicable."
+      - name: ENABLE_GL_MATCHING
+        description: "A boolean indicating whether general ledger matching is enabled for the account."
+      - name: LETTRAGE_SEQUENCE_ID
+        description: "The letterage sequence ID associated with the general ledger account, if applicable."
+      - name: STATUS
+        description: "The status of the account (e.g. 'active')"
+      - name: LAST_MODIFIED_DATE
+        description: "The timestamp when the account was last modified"
+      - name: CREATED_DATE
+        description: "The timestamp when the account was created"
+      - name: CREATED_BY
+        description: "The user ID of the person who created the account"
+      - name: MODIFIED_BY
+        description: "The user ID of the person who last modified the account"
+      - name: MEGA_ENTITY_KEY
+        description: "A unique key for the mega entity (not always populated)"
+      - name: MEGA_ENTITY_ID
+        description: "The ID of the mega entity (not always populated)"
+      - name: MEGA_ENTITY_NAME
+        description: "The name of the mega entity (not always populated)"
+      - name: REQUIRE_GL_DIM_BUSINESS_UNIT
+        description: "A boolean indicating whether a business unit is required for this account"
+      - name: REQUIRE_PROJECT
+        description: "A boolean indicating whether a project is required for this account"
+      - name: REQUIRE_CUSTOMER
+        description: "Indicates whether a customer is required for this general ledger account"
+      - name: REQUIRE_VENDOR
+        description: "Indicates whether a vendor is required for this general ledger account"
+      - name: REQUIRE_EMPLOYEE
+        description: "Indicates whether an employee is required for this general ledger account"
+      - name: REQUIRE_ITEM
+        description: "Indicates whether an item is required for this general ledger account"
+      - name: REQUIRE_CLASS
+        description: "Indicates whether a class is required for this general ledger account"
+      - name: REQUIRE_WAREHOUSE
+        description: "Indicates whether a warehouse is required for this general ledger account"
+      - name: DDS_READ_TIME
+        description: "The timestamp when the data was read from the source system"
+      - name: LOAD_DATE
+        description: "The timestamp when the data was loaded into the current system"
+      - name: DELETED_BY
+        description: "The user ID of the person who deleted the record (if applicable)"
+      - name: WHEN_DELETED
+        description: "The timestamp when the record was deleted (if applicable)"
+      - name: DDS_CHANGE_TYPE
+        description: "The type of change made to the record (e.g. insert, update, delete)"
+      - name: IS_DELETED
+        description: "A boolean indicating whether the record has been deleted (true) or not (false)"

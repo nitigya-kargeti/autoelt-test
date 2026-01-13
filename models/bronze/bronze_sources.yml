@@ -6,4 +6,4 @@ sources:
     database: "{{ target.database }}"
     schema: SAGEINTACCT
     tables:
-      - name: SRC_SI_GLJOURNAL
+      - name: SRC_SI_GLACCOUNT
