@@ -1,9 +1,0 @@
-version: 2
-
-# Auto-generated source declarations
-sources:
-  - name: SAGEINTACCT
-    database: "{{ target.database }}"
-    schema: SAGEINTACCT
-    tables:
-      - name: SRC_SI_GLJOURNAL
