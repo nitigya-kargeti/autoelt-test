@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: V_STG_SI_GLJOURNAL_L1
+    description: "This table stores information about general ledger journals, which are used to record and track financial transactions in an accounting system. Each row represents a unique journal, with attributes such as the journal symbol, start and last dates, adjustment status, book type, and status. The table also includes metadata about when the journal was created, modified, and deleted, as well as the user who performed these actions."
+    columns:
+      - name: SYMBOL
+        description: "A unique identifier or code for the journal entry"
+      - name: START_DATE
+        description: "The start date of the journal entry period"
+      - name: LAST_DATE
+        description: "The last date of the journal entry period"
+      - name: ADJUST
+        description: "A boolean indicating whether the journal entry is an adjustment"
+      - name: BOOK_TYPE
+        description: "The type of book or ledger that the journal entry belongs to"
+      - name: BOOK_ID
+        description: "A unique identifier for the book or ledger"
+      - name: BILLABLE
+        description: "A boolean indicating whether the journal entry is billable"
+      - name: DISABLE_DIRECT_POSTING
+        description: "A boolean indicating whether direct posting is disabled for the journal entry"
+      - name: STATUS
+        description: "The status of the journal entry (e.g. active, inactive)"
+      - name: RECORD_NO
+        description: "A unique record number for the journal entry"
+      - name: WHENMODIFIED
+        description: "The timestamp when the record was last modified"
+      - name: WHENCREATED
+        description: "The timestamp when the record was created"
+      - name: CREATEDBY
+        description: "The user ID of the person who created the record"
+      - name: MODIFIEDBY
+        description: "The user ID of the person who last modified the record"
+      - name: DDS_READ_TIME
+        description: "The timestamp when the record was last read or accessed"
+      - name: TITLE
+        description: "A brief title or description of the journal"
+      - name: LOAD_DATE
+        description: "The timestamp when the record was loaded into the system"
+      - name: DELETEDBY
+        description: "The user ID of the person who deleted the record (if applicable)"
+      - name: DELETED_DATE
+        description: "The timestamp when the record was deleted (if applicable)"
+      - name: DDS_CHANGE_TYPE
+        description: "The type of change made to the record (e.g. insert, update, delete)"
+      - name: IS_DELETED
+        description: "Indicates whether the journal entry has been deleted"
